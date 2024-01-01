@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+section,footer{
+    overflow: hidden;
+    white-space: wrap;
+    word-break: break-word;
+}
+#container {
+    
+    border: 1px solid #ccc;
+    width: 70rem;
+    height: 30rem;
+    
+            resize: both;
+            overflow: auto;
+            
+            box-sizing: border-box;
+            max-width: 100%;
+   
+}
+.container-border{
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+.editorcontainer{
+    
+    margin: 5%;
+    position: relative;
+            overflow: hidden;
+    
+}
+.letter-container {
+    display: inline-block;
+    
+}
+
+.letter {
+    display: block; /* border: 0.1px solid #ccc; */
+}
+
+.borders-on .letter {
+    border: 1px solid #ccc;
+  
+}
+.borders-off .letter {
+    border: none; 
+}
+
+#container,
+span div {
+    padding: 0;
+    margin: 0;
+}
+
+#milikits-container {
+    padding: 1rem;
+}
+
+#milikits-container p small {
+    padding: 0;
+    margin: 0;
+
+}
+
+.letter {
+    font-size: 1.5rem;
+}
+
+.basics {
+    font-size: 1.7rem;
+}
+
+.baseletter {
+    font-size: 3.5rem;
+   
+}
+
+
+
+.seregela,.tirikeza , .ihita , .others{
+    text-decoration-line: underline;
+    text-underline-offset: -0.85em;
+    
+}
+
+ 
+
+.whitespace {
+    visibility: hidden;
+}
+
+.stack {
+
+    margin-top: -1rem;
+    
+}
+.milikitstack {
+
+    margin-top: -4rem;
+    
+}
+#displayArea, .displayArea {
+    margin-bottom: -0.5rem;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+
+}
+.basicmilkit, .ihita, .seregela, .tirikeza, .others{
+    margin-right: 0.4rem;
+}
+.milikit{
+    font-size: 1.5rem;
+}
+.milikititem, #stacks-container>button{
+    padding: 0.5rem;
+    margin: 0.2rem;
+}
+.milikit-title{
+    display: inline;
+}
+#stacks-container{
+    font-size: 1.5rem;
+}

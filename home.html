@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Beta</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Beta</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content Area -->
+    <div class="container mt-4">
+        <h1>Welcome to [not-named-yet]</h1>
+        
+        <div class="alert alert-warning" role="alert">
+            Once you move past this point, you won't be able to edit the original text. Please double-check your input before proceeding.
+          </div>
+        <div class="container mt-5">
+            <form id="myForm">
+                <div class="form-group">
+                    <label for="textInput">Please input the text to which you would like to apply ምልክት to</label>
+                    <textarea required class="form-control" id="textInput" name="textInput" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                // Intercept form submission
+                $('#myForm').submit(function (event) {
+                    // Prevent the default form submission
+                    event.preventDefault();
+
+                    // Get the value from the textarea
+                    var enteredText = $('#textInput').val();
+
+                    // Redirect to main.html and pass the entered text as a query parameter
+                    window.location.href = 'main.html?text=' + encodeURIComponent(enteredText);
+                });
+            });
+        </script>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3 fixed-bottom">
+        <p>&copy; 2024 Beta. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
