@@ -92,17 +92,25 @@ span div {
 }
 
 .stack {
+    font-size: 1.5rem;
+
+    margin-top: -1rem;
+    line-height: 0.6rem;
+
+    
+}
+
+.milikitstack {
+    font-size: 1.5rem;
+
+    margin-top: -1rem;
+    line-height: 1rem;
 
     margin-top: -1rem;
     
 }
-.milikitstack {
-
-    margin-top: -4rem;
-    
-}
 #displayArea, .displayArea {
-    margin-bottom: -0.5rem;
+    margin-bottom: -0.2rem;
     writing-mode: vertical-lr;
     text-orientation: upright;
 
