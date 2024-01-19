@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,9 +12,6 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Custom Script -->
-    <script src="script.js"></script>
-
 </head>
 
 <body>
@@ -28,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
@@ -40,31 +38,49 @@
         </div>
     </nav>
 
-    <div class="editorcontainer">
-        <div class="alert alert-info container ">
-            <h1>GOING THROUGHT AN UPDATE</h1>
-            <p>This website is going through a major update, after receiving feedback. If you're in a great need to use
-                the webapp or you have any feedback to share, please contact me on telegram <a
-                    href="https://t.me/dnfisseha">t.me/dnfisseha</a></p>
+    <!-- Content Area -->
+    <div class="container mt-4">
+        <h1>Welcome to [not-named-yet] <span contenteditable="true">dfce<span class="icon-New-Project-3"> </span>wef</span></h1>
+        
+        <div class="alert alert-warning" role="alert">
+            Once you move past this point, you won't be able to edit the original text. Please double-check your input before proceeding.
+          </div>
+        <div class="container mt-5">
+            <form id="myForm">
+                <div class="form-group">
+                    <label for="textInput">Please input the text to which you would like to apply ምልክት to</label>
+                    <textarea style="font-size: 3rem;" required class="form-control" id="textInput" name="textInput" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
-        <div style="height: 50rem;"></div>
-    </div>
-    <script>
 
+        <script>
+            $(document).ready(function () {
+                // Intercept form submission
+                $('#myForm').submit(function (event) {
+                    // Prevent the default form submission
+                    event.preventDefault();
 
-    </script>
+                    // Get the value from the textarea
+                    var enteredText = $('#textInput').val();
+
+                    // Redirect to main.html and pass the entered text as a query parameter
+                    window.location.href = 'main.html?text=' + encodeURIComponent(enteredText);
+                });
+            });
+        </script>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center p-3 ">
+    <footer class="bg-dark text-white text-center p-3 fixed-bottom">
         <p>&copy; 2024 Beta. All rights reserved.</p>
     </footer>
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-
 
 </body>
 
